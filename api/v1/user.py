@@ -14,7 +14,6 @@ api = Redprint('user')
 @auth.login_required
 def super_get_user(uid):
 	user = User.query.filter_by(id=uid).first_or_404()
-	# view_model
 	return jsonify(user)
 
 @api.route('/<int:uid>', methods=['DELETE'])

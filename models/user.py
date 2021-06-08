@@ -49,3 +49,7 @@ class User(Base):
         if not self._password:
             return False
         return check_password_hash(self._password, raw)
+
+    @staticmethod
+    def test():
+        pass
