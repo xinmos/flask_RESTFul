@@ -37,6 +37,5 @@ def delete_user():
 def get_user():
 	uid = g.user.uid
 	user = User.query.filter_by(id=uid).first_or_404()
-	# view_model
 	return jsonify(user)
 
